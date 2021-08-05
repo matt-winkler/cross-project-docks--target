@@ -1,0 +1,22 @@
+
+version: 2
+
+sources:
+  - name: source_data
+    database: analytics
+    schema: dbt_mwinkler
+    tables:
+      - name: my_first_dbt_model
+        columns:
+          - name: id
+            tests:
+              - unique
+              - not_null
+      
+      - name: my_second_dbt_model
+        columns:
+          - name: id
+            tests:
+              - unique
+              - not_null
+      
